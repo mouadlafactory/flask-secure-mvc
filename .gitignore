@@ -1,0 +1,10 @@
+.env
+.DS_Store
+.vscode
+.idea
+.pytest_cache
+.ruff_cache
+.cursorrules
+.cursorignore
+
+/venv

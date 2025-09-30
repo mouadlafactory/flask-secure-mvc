@@ -1,0 +1,74 @@
+### Get request
+GET http://localhost:5000/api/tasks
+
+### Post request
+POST http://localhost:5000/api/tasks
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "description": "This is a test task"
+}
+
+### auth routes
+
+### register
+POST http://localhost:6000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "John Doe",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "password"
+}
+
+### login
+POST http://localhost:6000/api/auth/login
+Content-Type: application/json
+
+{
+    "login": "john.doe@example.com",
+    "password": "password"
+}
+
+### get current user
+GET http://localhost:6000/api/auth/me
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhkYzU3ZjViMGZlMTg3YjQxNjcxNmQ1IiwidXNlcm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc1OTI3NDU2NywiaWF0IjoxNzU5MjcwOTY3fQ.M0tmhwyxoUkBVtpHFO0YiWlJPbvJAiuu5-RH4_5Uryk
+
+
+
+### task routes
+
+### create task
+POST http://localhost:6000/api/tasks
+Content-Type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhkYzU3ZjViMGZlMTg3YjQxNjcxNmQ1IiwidXNlcm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc1OTI3NDU2NywiaWF0IjoxNzU5MjcwOTY3fQ.M0tmhwyxoUkBVtpHFO0YiWlJPbvJAiuu5-RH4_5Uryk
+
+{
+    "title": "Test Task",
+    "description": "This is a test task"
+}
+
+
+### get tasks
+GET http://localhost:6000/api/tasks
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhkYzU3ZjViMGZlMTg3YjQxNjcxNmQ1IiwidXNlcm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc1OTI3NDU2NywiaWF0IjoxNzU5MjcwOTY3fQ.M0tmhwyxoUkBVtpHFO0YiWlJPbvJAiuu5-RH4_5Uryk
+
+### get task
+GET http://localhost:6000/api/tasks/68dc623e81dbd49a31b39fe1
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhkYzU3ZjViMGZlMTg3YjQxNjcxNmQ1IiwidXNlcm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc1OTI3NDU2NywiaWF0IjoxNzU5MjcwOTY3fQ.M0tmhwyxoUkBVtpHFO0YiWlJPbvJAiuu5-RH4_5Uryk
+
+### update task
+PUT http://localhost:6000/api/tasks/68dc623e81dbd49a31b39fe1
+Content-Type: application/json
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhkYzU3ZjViMGZlMTg3YjQxNjcxNmQ1IiwidXNlcm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc1OTI3NDU2NywiaWF0IjoxNzU5MjcwOTY3fQ.M0tmhwyxoUkBVtpHFO0YiWlJPbvJAiuu5-RH4_5Uryk
+
+{
+    "priority": "high"
+}
+
+
+### delete task
+DELETE http://localhost:6000/api/tasks/68dc623e81dbd49a31b39fe1
+cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjhkYzU3ZjViMGZlMTg3YjQxNjcxNmQ1IiwidXNlcm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obi5kb2VAZXhhbXBsZS5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTc1OTI3NDU2NywiaWF0IjoxNzU5MjcwOTY3fQ.M0tmhwyxoUkBVtpHFO0YiWlJPbvJAiuu5-RH4_5Uryk

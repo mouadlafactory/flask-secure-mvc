@@ -10,7 +10,7 @@ from controllers.task_controller import (
 from middleware.auth_middleware import auth_required, admin_required
 
 # Create task blueprint
-task_bp = Blueprint('tasks', __name__, url_prefix='/api/tasks')
+task_bp = Blueprint('tasks', __name__)
 
 # User task routes (authentication required)
 @task_bp.route('', methods=['POST'])

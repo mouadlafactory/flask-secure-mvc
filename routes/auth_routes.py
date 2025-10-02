@@ -7,7 +7,7 @@ from controllers.auth_controller import register, login, logout, get_current_use
 from middleware.auth_middleware import auth_required
 
 # Create authentication blueprint
-auth_bp = Blueprint('auth', __name__, url_prefix='/api/auth')
+auth_bp = Blueprint('auth', __name__)
 
 # Public routes (no authentication required)
 @auth_bp.route('/register', methods=['POST'])

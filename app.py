@@ -41,8 +41,8 @@ def create_app(config_name=None):
         print(f"✗ MongoDB connection failed: {e}")
     
     # Register blueprints
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(task_bp)
+    app.register_blueprint(auth_bp, url_prefix='/api/auth')
+    app.register_blueprint(task_bp, url_prefix='/api/tasks')
     
     # Health check route
     @app.route('/')
